@@ -38,7 +38,7 @@ export default function Home() {
                   
                   {/* Main text with fluorescent flicker effect */}
                   <span className="relative tracking-wider drop-shadow-2xl">
-                    <span className="flicker-1">DIV</span><span className="flicker-2">IP</span><span className="flicker-3">HET</span>
+                    <span className="flicker-d">D</span><span className="flicker-i1">I</span><span className="flicker-v">V</span><span className="flicker-i2">I</span><span className="flicker-p">P</span><span className="flicker-h">H</span><span className="flicker-e">E</span><span className="flicker-t">T</span>
                   </span>
                 </span>
                 <div className="absolute -inset-4 bg-gradient-to-r from-[var(--cambridge-blue)]/20 via-[var(--delft-blue)]/20 to-[var(--light-green)]/20 blur-3xl rounded-3xl"></div>
