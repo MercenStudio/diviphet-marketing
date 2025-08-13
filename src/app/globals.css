@@ -1,26 +1,192 @@
 @import "tailwindcss";
 
 :root {
+  /* Accent colors - consistent across themes */
+  --van-dyke: #484041;
+  --delft-blue: #434371;
+  --cambridge-blue: #79aea3;
+  --light-green: #70ee9c;
+  --green-yellow: #b5f44a;
+}
+
+/* Dark theme (default) */
+:root,
+[data-theme='dark'] {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --surface: #2a2a2a;
+  --surface-hover: #3a3a3a;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  /* Legacy mappings */
+  --diviphet-purple-dark: #2a2a2a;
+  --diviphet-purple-light: #4a4a4a;
+  --diviphet-cyan: #79aea3;
+  --diviphet-pink: #70ee9c;
+}
+
+/* Light theme */
+[data-theme='light'] {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --surface: #f8f9fa;
+  --surface-hover: #e9ecef;
+  --border: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 0, 0, 0.2);
+  /* Legacy mappings */
+  --diviphet-purple-dark: #f8f9fa;
+  --diviphet-purple-light: #e9ecef;
+  --diviphet-cyan: #79aea3;
+  --diviphet-pink: #70ee9c;
 }
 
 @theme inline {
+  /* Surface colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-orbitron: var(--font-orbitron);
+  
+  /* Accent colors */
+  --color-van-dyke: var(--van-dyke);
+  --color-delft-blue: var(--delft-blue);
+  --color-cambridge-blue: var(--cambridge-blue);
+  --color-light-green: var(--light-green);
+  --color-green-yellow: var(--green-yellow);
+  
+  /* Legacy mappings */
+  --color-diviphet-purple-dark: var(--diviphet-purple-dark);
+  --color-diviphet-purple-light: var(--diviphet-purple-light);
+  --color-diviphet-cyan: var(--diviphet-cyan);
+  --color-diviphet-pink: var(--diviphet-pink);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Theme utility classes */
+.theme-bg { background: var(--background); }
+.theme-text { color: var(--foreground); }
+.theme-surface { background: var(--surface); }
+.theme-border { border-color: var(--border); }
+
+/* Fluorescent light flicker animations */
+@keyframes fluorescent-flicker {
+  0% { 
+    opacity: 0;
+    text-shadow: none;
   }
+  2% { 
+    opacity: 0.1;
+    text-shadow: 0 0 5px #79aea3;
+  }
+  4% { 
+    opacity: 0;
+    text-shadow: none;
+  }
+  8% { 
+    opacity: 0.8;
+    text-shadow: 0 0 10px #79aea3, 0 0 20px #434371;
+  }
+  10% { 
+    opacity: 0.3;
+    text-shadow: 0 0 5px #79aea3;
+  }
+  12% { 
+    opacity: 1;
+    text-shadow: 0 0 15px #79aea3, 0 0 25px #434371, 0 0 35px #70ee9c;
+  }
+  100% { 
+    opacity: 1;
+    text-shadow: 0 0 15px #79aea3, 0 0 25px #434371, 0 0 35px #70ee9c;
+  }
+}
+
+@keyframes fluorescent-flicker-delayed {
+  0%, 15% { 
+    opacity: 0;
+    text-shadow: none;
+  }
+  17% { 
+    opacity: 0.2;
+    text-shadow: 0 0 5px #434371;
+  }
+  19% { 
+    opacity: 0;
+    text-shadow: none;
+  }
+  25% { 
+    opacity: 0.9;
+    text-shadow: 0 0 10px #434371, 0 0 20px #79aea3;
+  }
+  27% { 
+    opacity: 0.4;
+    text-shadow: 0 0 5px #434371;
+  }
+  30% { 
+    opacity: 1;
+    text-shadow: 0 0 15px #79aea3, 0 0 25px #434371, 0 0 35px #70ee9c;
+  }
+  100% { 
+    opacity: 1;
+    text-shadow: 0 0 15px #79aea3, 0 0 25px #434371, 0 0 35px #70ee9c;
+  }
+}
+
+@keyframes fluorescent-flicker-late {
+  0%, 30% { 
+    opacity: 0;
+    text-shadow: none;
+  }
+  32% { 
+    opacity: 0.15;
+    text-shadow: 0 0 3px #70ee9c;
+  }
+  34% { 
+    opacity: 0;
+    text-shadow: none;
+  }
+  36% { 
+    opacity: 0.6;
+    text-shadow: 0 0 8px #70ee9c;
+  }
+  38% { 
+    opacity: 0.2;
+    text-shadow: 0 0 3px #70ee9c;
+  }
+  45% { 
+    opacity: 1;
+    text-shadow: 0 0 15px #79aea3, 0 0 25px #434371, 0 0 35px #70ee9c;
+  }
+  100% { 
+    opacity: 1;
+    text-shadow: 0 0 15px #79aea3, 0 0 25px #434371, 0 0 35px #70ee9c;
+  }
+}
+
+/* Animation classes for different segments of the text */
+.flicker-1 {
+  animation: fluorescent-flicker 4s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+.flicker-2 {
+  animation: fluorescent-flicker-delayed 4s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+.flicker-3 {
+  animation: fluorescent-flicker-late 4s ease-out forwards;
+  opacity: 0; /* Start invisible */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
