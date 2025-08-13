@@ -1,0 +1,31 @@
+<svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified version for favicon - higher contrast, thicker lines -->
+  <g>          
+    <!-- Main diamond shape -->
+    <polygon 
+      points="50,15 25,40 50,85 75,40" 
+      fill="#434371"
+      fill-opacity="0.4"
+      stroke="#79aea3"
+      stroke-width="3"
+    />
+    
+    <!-- Top facet -->
+    <polygon 
+      points="50,15 25,40 50,50 75,40" 
+      fill="#79aea3"
+      fill-opacity="0.6"
+      stroke="#70ee9c"
+      stroke-width="2"
+    />
+    
+    <!-- Center highlight -->
+    <line 
+      x1="50" y1="15" 
+      x2="50" y2="85" 
+      stroke="#70ee9c"
+      stroke-width="2"
+      opacity="0.8"
+    />
+  </g>
+</svg>

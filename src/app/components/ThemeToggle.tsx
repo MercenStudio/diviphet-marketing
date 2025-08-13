@@ -3,7 +3,11 @@
 import { useTheme } from './ThemeProvider';
 import { useEffect, useState } from 'react';
 
-export function ThemeToggle() {
+interface ThemeToggleProps {
+  className?: string;
+}
+
+export function ThemeToggle({ className = "" }: ThemeToggleProps) {
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -13,14 +17,14 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="fixed top-6 right-6 z-50 bg-[var(--surface)] border-[var(--border-hover)] border rounded-lg p-3 w-11 h-11" />
+      <div className={`bg-[var(--surface)] border-[var(--border-hover)] border rounded-lg p-2 w-9 h-9 ${className}`} />
     );
   }
 
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 bg-[var(--surface)] hover:bg-[var(--surface-hover)] border-[var(--border-hover)] border rounded-lg p-3 transition-all duration-200"
+      className={`bg-[var(--surface)] hover:bg-[var(--surface-hover)] border-[var(--border-hover)] border rounded-lg p-2 transition-all duration-200 ${className}`}
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (
