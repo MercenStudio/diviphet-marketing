@@ -32,6 +32,10 @@ export default function Home() {
                     size={120} 
                     className="relative z-10 drop-shadow-2xl text-[var(--foreground)]"
                   />
+                  {/* Alpha Badge */}
+                  <div className="absolute -top-2 -right-2 bg-[var(--light-green)] text-black px-3 py-1 rounded-full text-xs font-bold font-orbitron tracking-wide">
+                    ALPHA
+                  </div>
                 </div>
               </div>
 
@@ -54,16 +58,25 @@ export default function Home() {
             <p className="text-xl sm:text-2xl text-[var(--foreground)]/80 mb-4 max-w-4xl mx-auto">
               Skip the Tedium, Keep the Magic
             </p>
-            <p className="text-lg text-[var(--foreground)]/60 mb-12 max-w-3xl mx-auto">
-              Let AI handle the math, lookups, and bookkeeping so you can focus on what makes tabletop RPGs special - collaborative storytelling and creative problem-solving.
+            <p className="text-lg text-[var(--foreground)]/60 mb-6 max-w-3xl mx-auto">
+              AI-powered assistant for tabletop RPGs. Let our Game Master handle rule lookups and dice calculations so you can focus on collaborative storytelling and creative problem-solving.
             </p>
+            <div className="bg-[var(--light-green)]/10 border border-[var(--light-green)]/30 rounded-lg p-4 max-w-2xl mx-auto mb-8">
+              <p className="text-[var(--light-green)] text-sm font-semibold mb-1">🎮 Alpha Testing Now Available</p>
+              <p className="text-[var(--foreground)]/70 text-sm">
+                Be among the first to experience Diviphet. Limited alpha spots available for dedicated RPG enthusiasts.
+              </p>
+            </div>
             <div className="flex justify-center">
-              <button className="bg-gradient-to-r from-[var(--delft-blue)] to-[var(--cambridge-blue)] hover:from-[var(--delft-blue)]/80 hover:to-[var(--cambridge-blue)]/80 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2">
+              <a 
+                href="mailto:diviphet@mercen.ai?subject=Alpha%20Access%20Request&body=Hi!%20I%27d%20like%20to%20request%20access%20to%20the%20Diviphet%20alpha.%0A%0APlease%20include:%0A-%20Your%20RPG%20experience%20level%0A-%20Preferred%20game%20systems%0A-%20What%20you%27re%20most%20excited%20to%20test"
+                className="bg-gradient-to-r from-[var(--light-green)] to-[var(--cambridge-blue)] hover:from-[var(--light-green)]/80 hover:to-[var(--cambridge-blue)]/80 text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2"
+              >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418Z"/>
+                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
-                Join Our Community
-              </button>
+                Request Alpha Access
+              </a>
             </div>
           </div>
         </div>
@@ -82,7 +95,12 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[var(--surface)]/50 p-8 rounded-xl border border-[var(--delft-blue)]/20">
+            <div className="bg-[var(--surface)]/50 p-8 rounded-xl border border-[var(--delft-blue)]/20 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-[var(--light-green)] text-black px-2 py-1 rounded text-xs font-bold">
+                  ALPHA
+                </span>
+              </div>
               <div className="w-12 h-12 bg-[var(--delft-blue)] rounded-lg mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -90,11 +108,16 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-3">Instant Rule Reference</h3>
               <p className="text-[var(--foreground)]/80">
-                Get immediate answers about game mechanics, spells, and abilities. No more flipping through books or interrupting the flow.
+                Get immediate answers about game mechanics, spells, and abilities. Chat directly with our AI Game Master for rule clarifications.
               </p>
             </div>
 
-            <div className="bg-[var(--surface)]/50 p-8 rounded-xl border border-[var(--cambridge-blue)]/20">
+            <div className="bg-[var(--surface)]/50 p-8 rounded-xl border border-[var(--cambridge-blue)]/20 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-[var(--delft-blue)] text-white px-2 py-1 rounded text-xs font-bold">
+                  COMING SOON
+                </span>
+              </div>
               <div className="w-12 h-12 bg-[var(--cambridge-blue)] rounded-lg mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -102,11 +125,16 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-3">Encounter & Session Tools</h3>
               <p className="text-[var(--foreground)]/80">
-                Automated initiative tracking, damage calculations, and condition management. Quick reference tools keep your game flowing smoothly.
+                Automated initiative tracking, damage calculations, and condition management. Advanced session management coming to beta.
               </p>
             </div>
 
-            <div className="bg-[var(--surface)]/50 p-8 rounded-xl border border-[var(--light-green)]/20">
+            <div className="bg-[var(--surface)]/50 p-8 rounded-xl border border-[var(--light-green)]/20 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-[var(--light-green)] text-black px-2 py-1 rounded text-xs font-bold">
+                  ALPHA
+                </span>
+              </div>
               <div className="w-12 h-12 bg-[var(--light-green)] rounded-lg mb-4 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -114,7 +142,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-3">Open Gaming Compatible</h3>
               <p className="text-[var(--foreground)]/80">
-                Built on the System Reference Document and Creative Commons content. Support for additional game systems coming soon.
+                Built on D&D 5e SRD and Open Gaming License content. Test dice rolling, character assistance, and basic rule queries in alpha.
               </p>
             </div>
           </div>
@@ -177,86 +205,150 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Platform Tools Section */}
+      {/* Alpha Testing Program Section */}
       <section className="py-24 bg-[var(--surface)]/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--light-green)]/20 border border-[var(--light-green)]/30 rounded-full mb-4">
+              <span className="text-[var(--light-green)] text-sm font-bold">⚡ LIMITED SPOTS</span>
+            </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Platform
+              Alpha Testing Program
             </h2>
             <p className="text-xl text-[var(--foreground)]/80 max-w-3xl mx-auto">
-              While the community creates the rules and worlds, the Diviphet Platform provides the tools to bring them to life.
+              Join an exclusive group of RPG enthusiasts testing the future of tabletop gaming. Your feedback shapes Diviphet&apos;s development.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-[var(--surface)]/50 p-6 rounded-xl text-center border-2 border-[var(--delft-blue)]/40">
               <div className="w-16 h-16 bg-[var(--delft-blue)] rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-orbitron font-black text-white">01</span>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Simple & Fast</h3>
-              <p className="text-[var(--foreground)]/60 text-sm">No complex setup or learning curve</p>
+              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Test Early</h3>
+              <p className="text-[var(--foreground)]/60 text-sm">Be first to experience Diviphet&apos;s AI Game Master</p>
             </div>
 
             <div className="bg-[var(--surface)]/50 p-6 rounded-xl text-center border-2 border-[var(--cambridge-blue)]/40">
               <div className="w-16 h-16 bg-[var(--cambridge-blue)] rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-orbitron font-black text-white">02</span>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Tool Integration</h3>
-              <p className="text-[var(--foreground)]/60 text-sm">Works with your existing VTT and apps</p>
+              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Shape Development</h3>
+              <p className="text-[var(--foreground)]/60 text-sm">Your feedback directly influences features</p>
             </div>
 
             <div className="bg-[var(--surface)]/50 p-6 rounded-xl text-center border-2 border-[var(--light-green)]/40">
               <div className="w-16 h-16 bg-[var(--light-green)] rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-orbitron font-black text-white">03</span>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Creation Tools</h3>
-              <p className="text-[var(--foreground)]/60 text-sm">Build and share your content</p>
+              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Exclusive Access</h3>
+              <p className="text-[var(--foreground)]/60 text-sm">Limited spots for dedicated testers</p>
             </div>
 
             <div className="bg-[var(--surface)]/50 p-6 rounded-xl text-center border-2 border-[var(--green-yellow)]/40">
               <div className="w-16 h-16 bg-[var(--green-yellow)] rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-orbitron font-black text-white">04</span>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Community Hub</h3>
-              <p className="text-[var(--foreground)]/60 text-sm">Connect with creators worldwide</p>
+              <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">Lifetime Benefits</h3>
+              <p className="text-[var(--foreground)]/60 text-sm">Special pricing and recognition for alpha testers</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* Alpha Recruitment CTA Section */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-            Ready to play?
-          </h2>
-          <p className="text-xl text-[var(--foreground)]/80 mb-8">
-            Join the community building the next generation of tabletop roleplaying. Connect with creators, share ideas, and help shape the future of RPGs.
-          </p>
-
-          {/* Email signup */}
-          <div className="max-w-md mx-auto mb-8">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email for updates"
-                className="flex-1 px-4 py-3 bg-[var(--surface)]/50 border border-[var(--border)] rounded-lg text-[var(--foreground)] placeholder-[var(--foreground)]/40 focus:outline-none focus:ring-2 focus:ring-[var(--delft-blue)] focus:border-transparent"
-              />
-              <button className="bg-[var(--delft-blue)] hover:bg-[var(--delft-blue)]/80 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
-                Get Updates
-              </button>
+          <div className="bg-gradient-to-r from-[var(--delft-blue)]/10 to-[var(--cambridge-blue)]/10 rounded-2xl p-8 border border-[var(--delft-blue)]/20 mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[var(--light-green)]/20 border border-[var(--light-green)]/30 rounded-full mb-4">
+              <span className="w-2 h-2 bg-[var(--light-green)] rounded-full animate-pulse"></span>
+              <span className="text-[var(--light-green)] text-sm font-bold">ALPHA RECRUITMENT ACTIVE</span>
             </div>
-            <p className="text-sm text-[var(--foreground)]/50 mt-2 text-center">Be the first to know when we launch</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
+              Ready to Test the Future?
+            </h2>
+            <p className="text-xl text-[var(--foreground)]/80 mb-8">
+              Join a select group of RPG enthusiasts who will help shape Diviphet. Alpha testers get exclusive access, direct influence on features, and lifetime benefits.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="text-left">
+                <h3 className="font-semibold text-[var(--foreground)] mb-3">What You&apos;ll Test:</h3>
+                <ul className="space-y-2 text-[var(--foreground)]/70">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--light-green)] rounded-full"></div>
+                    AI Game Master conversations
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--light-green)] rounded-full"></div>
+                    Rule lookups and mechanics
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--light-green)] rounded-full"></div>
+                    Dice rolling system
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--light-green)] rounded-full"></div>
+                    Session management tools
+                  </li>
+                </ul>
+              </div>
+              <div className="text-left">
+                <h3 className="font-semibold text-[var(--foreground)] mb-3">Alpha Tester Benefits:</h3>
+                <ul className="space-y-2 text-[var(--foreground)]/70">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--cambridge-blue)] rounded-full"></div>
+                    Lifetime discount on subscription
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--cambridge-blue)] rounded-full"></div>
+                    Direct line to development team
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--cambridge-blue)] rounded-full"></div>
+                    Special recognition as founder
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-[var(--cambridge-blue)] rounded-full"></div>
+                    Early access to all new features
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="mailto:diviphet@mercen.ai?subject=Alpha%20Access%20Request&body=Hi!%20I%27d%20like%20to%20request%20access%20to%20the%20Diviphet%20alpha.%0A%0APlease%20include:%0A-%20Your%20RPG%20experience%20level%0A-%20Preferred%20game%20systems%0A-%20What%20you%27re%20most%20excited%20to%20test%0A-%20How%20often%20you%20play%20RPGs"
+                className="bg-gradient-to-r from-[var(--light-green)] to-[var(--cambridge-blue)] hover:from-[var(--light-green)]/80 hover:to-[var(--cambridge-blue)]/80 text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2 justify-center"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                Request Alpha Access
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-[var(--delft-blue)] to-[var(--cambridge-blue)] hover:from-[var(--delft-blue)]/80 hover:to-[var(--cambridge-blue)]/80 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2 justify-center">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418Z"/>
+          {/* Beta updates signup */}
+          <div className="max-w-md mx-auto">
+            <p className="text-sm text-[var(--foreground)]/60 mb-4">Not ready for alpha? Get notified about beta launch:</p>
+            <a
+              href="mailto:diviphet@mercen.ai?subject=Beta%20Updates%20Request&body=Hi!%20Please%20add%20me%20to%20your%20beta%20launch%20notification%20list.%0A%0AI%27m%20interested%20in%20trying%20Diviphet%20when%20it%27s%20more%20stable."
+              className="inline-flex items-center gap-2 bg-[var(--delft-blue)] hover:bg-[var(--delft-blue)]/80 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              Join Discord Community
-            </button>
+              Email me for Beta Updates
+            </a>
           </div>
         </div>
       </section>

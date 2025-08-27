@@ -2,59 +2,80 @@ import { RoadmapItem, RoadmapQuarter } from '../types/roadmap';
 
 export const roadmapData: RoadmapItem[] = [
   {
-    id: "community-v1",
-    title: "Diviphet Community Discord",
-    description: "Establish the Diviphet Community",
-    category: "community",
-    status: "in-progress",
-    estimatedRelease: "Q3 2025",
-    features: [
-      "Discord community for collaboration"
-    ],
-    priority: "high"
-  },
-  {
     id: "alpha-testers",
-    title: "Sign up alpha testing squad",
-    description: "We're looking for alpha testers! Join the discord community or sign up to our mailing list to request access",
+    title: "Alpha Testing Program",
+    description: "Friends and family alpha testing to validate core concepts and gather feedback",
     category: "core",
     status: "in-progress",
     estimatedRelease: "Q4 2025",
     features: [
-      "Test our hypothesis",
-      "Direct feedback to the diviphet team",
-      "Ability to shape the project",
-      "Lifelong discount for the service as thanks for your contributions"
+      "Invite-only alpha access",
+      "Basic AI Game Master conversations",
+      "Dice rolling and game mechanics",
+      "Direct feedback collection",
+      "Core feature validation"
     ],
     priority: "high"
   },
   {
     id: 'core-assistant-v1',
-    title: 'Core AI Assistant Launch',
-    description: 'Launch the foundational AI assistant for tabletop RPGs with rule lookups and basic encounter management.',
+    title: 'AI Game Master Beta',
+    description: 'Refined AI assistant for tabletop RPGs with expanded capabilities based on alpha feedback',
     category: 'core',
     status: 'in-progress',
-    estimatedRelease: 'Q1 2026',
+    estimatedRelease: 'Q4 2026',
     features: [
       'SRD rule reference and lookup',
       'Initiative tracking',
-      'Basic damage calculations',
+      'Advanced damage calculations',
       'Spell and ability quick reference',
-      'Discord bot integration'
+      'Session management improvements'
     ],
     priority: 'high'
   },
   {
-    id: "mcp server",
-    title: "MCP Server",
-    description: "Launch foundational MCP server",
-    category: "core",
-    status: "in-progress",
-    estimatedRelease: "Q1 2026",
+    id: "community-v1",
+    title: "Diviphet Community Discord",
+    description: "Launch community platform after alpha validation",
+    category: "community",
+    status: "planned",
+    estimatedRelease: "Q4 2025",
     features: [
-      "Integrate with your favorite agents"
+      "Discord community for collaboration",
+      "Alpha tester feedback integration",
+      "Community-driven feature requests"
     ],
-    priority: "high"
+    priority: "medium"
+  },
+  {
+    id: "mcp-server",
+    title: "MCP Server Integration",
+    description: "Claude integration server for enhanced AI capabilities",
+    category: "core",
+    status: "planned",
+    estimatedRelease: "Q2 2026",
+    features: [
+      "Integrate with Claude and other AI agents",
+      "Enhanced rule processing",
+      "Advanced conversation context"
+    ],
+    priority: "medium"
+  },
+  {
+    id: 'campaign-portal',
+    title: 'Campaign Management Portal',
+    description: 'File upload capabilities and campaign organization tools.',
+    category: 'core',
+    status: 'planned',
+    estimatedRelease: 'Q1 2026',
+    features: [
+      'PDF and document upload',
+      'Campaign notes and organization',
+      'Session planning tools',
+      'Character sheet storage',
+      'Rule reference management'
+    ],
+    priority: 'high'
   },
   {
     id: 'character-management',
@@ -62,13 +83,13 @@ export const roadmapData: RoadmapItem[] = [
     description: 'Comprehensive character creation, tracking, and management tools for players.',
     category: 'core',
     status: 'planned',
-    estimatedRelease: 'Q2 2026',
+    estimatedRelease: 'Q4 2026',
     features: [
       'Character sheet integration',
       'Level progression tracking',
       'Equipment and inventory management',
       'Character build optimization suggestions',
-      'Export to popular VTT platforms'
+      'Import/export capabilities'
     ],
     priority: 'medium'
   },
@@ -78,7 +99,7 @@ export const roadmapData: RoadmapItem[] = [
     description: 'AI-powered encounter generation and balancing for game masters.',
     category: 'core',
     status: 'planned',
-    estimatedRelease: 'Q2 2026',
+    estimatedRelease: 'Q1 2026',
     features: [
       'Balanced encounter generation',
       'Environmental hazard suggestions',
@@ -94,7 +115,7 @@ export const roadmapData: RoadmapItem[] = [
     description: 'Deep integrations with popular virtual tabletop platforms.',
     category: 'integrations',
     status: 'planned',
-    estimatedRelease: 'Q3 2026',
+    estimatedRelease: 'Q2 2026',
     features: [
       'Roll20 integration',
       'Foundry VTT plugin',
@@ -105,28 +126,12 @@ export const roadmapData: RoadmapItem[] = [
     priority: 'high'
   },
   {
-    id: 'campaign-tools',
-    title: 'Campaign Management Hub',
-    description: 'Complete campaign planning and session management tools for game masters.',
-    category: 'core',
-    status: 'planned',
-    estimatedRelease: 'Q4 2026',
-    features: [
-      'Session planning and notes',
-      'NPC relationship mapping',
-      'World building templates',
-      'Story arc tracking',
-      'Player engagement analytics'
-    ],
-    priority: 'medium'
-  },
-  {
     id: 'community-features',
     title: 'Community Content Platform',
     description: 'Platform for sharing and discovering community-created content.',
     category: 'community',
     status: 'planned',
-    estimatedRelease: 'Q4 2026',
+    estimatedRelease: 'Q3 2026',
     features: [
       'User-generated encounter library',
       'Community character builds',
@@ -142,7 +147,7 @@ export const roadmapData: RoadmapItem[] = [
     description: 'Next-generation AI features for dynamic storytelling assistance.',
     category: 'core',
     status: 'planned',
-    estimatedRelease: 'Q2 2026',
+    estimatedRelease: 'Q4 2026',
     features: [
       'Dynamic plot generation',
       'Character dialogue suggestions',
@@ -155,6 +160,11 @@ export const roadmapData: RoadmapItem[] = [
 ];
 
 export const roadmapQuarters: RoadmapQuarter[] = [
+  {
+    quarter: 'Q4',
+    year: 2024,
+    items: roadmapData.filter(item => item.estimatedRelease === 'Q4 2024')
+  },
   {
     quarter: 'Q1',
     year: 2025,
@@ -184,5 +194,15 @@ export const roadmapQuarters: RoadmapQuarter[] = [
     quarter: 'Q2',
     year: 2026,
     items: roadmapData.filter(item => item.estimatedRelease === 'Q2 2026')
+  },
+  {
+    quarter: 'Q3',
+    year: 2026,
+    items: roadmapData.filter(item => item.estimatedRelease === 'Q3 2026')
+  },
+  {
+    quarter: 'Q4',
+    year: 2026,
+    items: roadmapData.filter(item => item.estimatedRelease === 'Q4 2026')
   }
 ];

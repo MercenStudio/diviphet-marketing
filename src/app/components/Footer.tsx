@@ -7,8 +7,7 @@ export function Footer() {
             Crafted with
             <span className="text-[var(--cambridge-blue)] font-semibold"> AI excellence</span>
             {" "}using
-            <a href="https://anthropic.com/claude" className="text-[var(--cambridge-blue)] hover:text-[var(--light-green)] font-semibold transition-all duration-200"> Claude</a>,
-            <a href="https://codeium.com/windsurf" className="text-[var(--cambridge-blue)] hover:text-[var(--light-green)] font-semibold transition-all duration-200"> Windsurf</a>,
+            <a href="https://anthropic.com/claude-code" className="text-[var(--cambridge-blue)] hover:text-[var(--light-green)] font-semibold transition-all duration-200"> Claude Code</a>,
             {" "}and other AI tools.
           </p>
           <p className="text-sm flex items-center justify-center gap-2 mb-4 font-medium">
