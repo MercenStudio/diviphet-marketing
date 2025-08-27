@@ -38,6 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script 
+          defer 
+          src="https://cloud.umami.is/script.js" 
+          data-website-id="6dc64fe6-085a-4708-b36c-791beb9f0da9"
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased`}
       >
