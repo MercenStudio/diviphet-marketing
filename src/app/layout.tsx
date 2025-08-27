@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +20,15 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "Diviphet - The Future of Tabletop RPGs",
-  description: "Where Traditional RPGs Meet the Future of Interactive Storytelling. Build worlds, create rules, and shape stories together in the first truly community-driven RPG ecosystem.",
+  title: "Diviphet - AI Assistant for Tabletop RPGs",
+  description: "Enhance your favorite tabletop roleplaying games with intelligent AI assistance. Keep the flow, reduce the friction, and focus on what matters most - the story.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' }
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' }
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +41,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

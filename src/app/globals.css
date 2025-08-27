@@ -1,26 +1,234 @@
 @import "tailwindcss";
 
 :root {
+  /* Accent colors - consistent across themes */
+  --van-dyke: #484041;
+  --delft-blue: #434371;
+  --cambridge-blue: #79aea3;
+  --light-green: #70ee9c;
+  --green-yellow: #b5f44a;
+}
+
+/* Dark theme (default) */
+:root,
+[data-theme='dark'] {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --surface: #2a2a2a;
+  --surface-hover: #3a3a3a;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  /* Legacy mappings */
+  --diviphet-purple-dark: #2a2a2a;
+  --diviphet-purple-light: #4a4a4a;
+  --diviphet-cyan: #79aea3;
+  --diviphet-pink: #70ee9c;
+}
+
+/* Light theme */
+[data-theme='light'] {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --surface: #f8f9fa;
+  --surface-hover: #e9ecef;
+  --border: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 0, 0, 0.2);
+  /* Legacy mappings */
+  --diviphet-purple-dark: #f8f9fa;
+  --diviphet-purple-light: #e9ecef;
+  --diviphet-cyan: #79aea3;
+  --diviphet-pink: #70ee9c;
 }
 
 @theme inline {
+  /* Surface colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-orbitron: var(--font-orbitron);
+  
+  /* Accent colors */
+  --color-van-dyke: var(--van-dyke);
+  --color-delft-blue: var(--delft-blue);
+  --color-cambridge-blue: var(--cambridge-blue);
+  --color-light-green: var(--light-green);
+  --color-green-yellow: var(--green-yellow);
+  
+  /* Legacy mappings */
+  --color-diviphet-purple-dark: var(--diviphet-purple-dark);
+  --color-diviphet-purple-light: var(--diviphet-purple-light);
+  --color-diviphet-cyan: var(--diviphet-cyan);
+  --color-diviphet-pink: var(--diviphet-pink);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Theme utility classes */
+.theme-bg { background: var(--background); }
+.theme-text { color: var(--foreground); }
+.theme-surface { background: var(--surface); }
+.theme-border { border-color: var(--border); }
+
+/* Chaotic fluorescent light flicker animations - each letter gets its own random pattern */
+@keyframes flicker-d {
+  0%, 3% { opacity: 0; text-shadow: none; }
+  4% { opacity: 0.15; text-shadow: 0 0 3px #79aea3; }
+  5% { opacity: 0; text-shadow: none; }
+  7% { opacity: 0.8; text-shadow: 0 0 8px #79aea3; }
+  8% { opacity: 0.2; text-shadow: 0 0 2px #79aea3; }
+  9% { opacity: 0; text-shadow: none; }
+  12% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-i1 {
+  0%, 8% { opacity: 0; text-shadow: none; }
+  9% { opacity: 0.3; text-shadow: 0 0 4px #434371; }
+  10% { opacity: 0; text-shadow: none; }
+  11% { opacity: 0.1; text-shadow: 0 0 2px #434371; }
+  12% { opacity: 0; text-shadow: none; }
+  15% { opacity: 0.9; text-shadow: 0 0 10px #434371; }
+  16% { opacity: 0.4; text-shadow: 0 0 5px #434371; }
+  18% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-v {
+  0%, 1% { opacity: 0; text-shadow: none; }
+  2% { opacity: 0.4; text-shadow: 0 0 5px #70ee9c; }
+  3% { opacity: 0; text-shadow: none; }
+  5% { opacity: 0.2; text-shadow: 0 0 3px #70ee9c; }
+  6% { opacity: 0; text-shadow: none; }
+  8% { opacity: 0.7; text-shadow: 0 0 8px #70ee9c; }
+  9% { opacity: 0.1; text-shadow: 0 0 2px #70ee9c; }
+  11% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-i2 {
+  0%, 13% { opacity: 0; text-shadow: none; }
+  14% { opacity: 0.2; text-shadow: 0 0 3px #79aea3; }
+  15% { opacity: 0; text-shadow: none; }
+  17% { opacity: 0.6; text-shadow: 0 0 7px #79aea3; }
+  18% { opacity: 0; text-shadow: none; }
+  19% { opacity: 0.3; text-shadow: 0 0 4px #79aea3; }
+  21% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-p {
+  0%, 6% { opacity: 0; text-shadow: none; }
+  7% { opacity: 0.1; text-shadow: 0 0 2px #434371; }
+  8% { opacity: 0; text-shadow: none; }
+  10% { opacity: 0.5; text-shadow: 0 0 6px #434371; }
+  11% { opacity: 0; text-shadow: none; }
+  13% { opacity: 0.8; text-shadow: 0 0 9px #434371; }
+  14% { opacity: 0.3; text-shadow: 0 0 4px #434371; }
+  16% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-h {
+  0%, 11% { opacity: 0; text-shadow: none; }
+  12% { opacity: 0.25; text-shadow: 0 0 4px #70ee9c; }
+  13% { opacity: 0; text-shadow: none; }
+  14% { opacity: 0.1; text-shadow: 0 0 2px #70ee9c; }
+  15% { opacity: 0; text-shadow: none; }
+  17% { opacity: 0.9; text-shadow: 0 0 10px #70ee9c; }
+  18% { opacity: 0.2; text-shadow: 0 0 3px #70ee9c; }
+  20% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-e {
+  0%, 16% { opacity: 0; text-shadow: none; }
+  17% { opacity: 0.3; text-shadow: 0 0 4px #79aea3; }
+  18% { opacity: 0; text-shadow: none; }
+  20% { opacity: 0.7; text-shadow: 0 0 8px #79aea3; }
+  21% { opacity: 0; text-shadow: none; }
+  22% { opacity: 0.4; text-shadow: 0 0 5px #79aea3; }
+  23% { opacity: 0; text-shadow: none; }
+  25% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+@keyframes flicker-t {
+  0%, 9% { opacity: 0; text-shadow: none; }
+  10% { opacity: 0.2; text-shadow: 0 0 3px #434371; }
+  11% { opacity: 0; text-shadow: none; }
+  14% { opacity: 0.6; text-shadow: 0 0 7px #434371; }
+  15% { opacity: 0; text-shadow: none; }
+  16% { opacity: 0.1; text-shadow: 0 0 2px #434371; }
+  17% { opacity: 0; text-shadow: none; }
+  19% { opacity: 0.8; text-shadow: 0 0 9px #434371; }
+  20% { opacity: 0.3; text-shadow: 0 0 4px #434371; }
+  23% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+  100% { opacity: 1; text-shadow: 0 0 15px #79aea3, 0 0 25px #434371; }
+}
+
+/* Animation classes for each character */
+.flicker-d {
+  animation: flicker-d 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-i1 {
+  animation: flicker-i1 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-v {
+  animation: flicker-v 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-i2 {
+  animation: flicker-i2 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-p {
+  animation: flicker-p 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-h {
+  animation: flicker-h 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-e {
+  animation: flicker-e 5s ease-out forwards;
+  opacity: 0;
+}
+
+.flicker-t {
+  animation: flicker-t 5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Slow rotation animation for logos */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
