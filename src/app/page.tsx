@@ -72,8 +72,9 @@ export default function Home() {
                 href="mailto:diviphet@mercen.ai?subject=Alpha%20Access%20Request&body=Hi!%20I%27d%20like%20to%20request%20access%20to%20the%20Diviphet%20alpha.%0A%0APlease%20include:%0A-%20Your%20RPG%20experience%20level%0A-%20Preferred%20game%20systems%0A-%20What%20you%27re%20most%20excited%20to%20test"
                 className="bg-gradient-to-r from-[var(--light-green)] to-[var(--cambridge-blue)] hover:from-[var(--light-green)]/80 hover:to-[var(--cambridge-blue)]/80 text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-10 5L2 7"/>
                 </svg>
                 Request Alpha Access
               </a>
@@ -329,8 +330,9 @@ export default function Home() {
                 href="mailto:diviphet@mercen.ai?subject=Alpha%20Access%20Request&body=Hi!%20I%27d%20like%20to%20request%20access%20to%20the%20Diviphet%20alpha.%0A%0APlease%20include:%0A-%20Your%20RPG%20experience%20level%0A-%20Preferred%20game%20systems%0A-%20What%20you%27re%20most%20excited%20to%20test%0A-%20How%20often%20you%20play%20RPGs"
                 className="bg-gradient-to-r from-[var(--light-green)] to-[var(--cambridge-blue)] hover:from-[var(--light-green)]/80 hover:to-[var(--cambridge-blue)]/80 text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2 justify-center"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m22 7-10 5L2 7"/>
                 </svg>
                 Request Alpha Access
               </a>
@@ -344,8 +346,9 @@ export default function Home() {
               href="mailto:diviphet@mercen.ai?subject=Beta%20Updates%20Request&body=Hi!%20Please%20add%20me%20to%20your%20beta%20launch%20notification%20list.%0A%0AI%27m%20interested%20in%20trying%20Diviphet%20when%20it%27s%20more%20stable."
               className="inline-flex items-center gap-2 bg-[var(--delft-blue)] hover:bg-[var(--delft-blue)]/80 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-10 5L2 7"/>
               </svg>
               Email me for Beta Updates
             </a>
