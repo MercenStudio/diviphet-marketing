@@ -38,7 +38,7 @@ export const roadmapData: RoadmapItem[] = [
     title: "Diviphet Community Discord",
     description: "Launch community platform after alpha validation",
     category: "community",
-    status: "planned",
+    status: "in-progress",
     estimatedRelease: "Q4 2025",
     features: [
       "Discord community for collaboration",
@@ -63,8 +63,8 @@ export const roadmapData: RoadmapItem[] = [
   },
   {
     id: 'campaign-portal',
-    title: 'Campaign Management Portal',
-    description: 'File upload capabilities and campaign organization tools.',
+    title: 'Campaign Portal',
+    description: 'A place to organize the details of your campaign.',
     category: 'core',
     status: 'planned',
     estimatedRelease: 'Q1 2026',
@@ -96,7 +96,7 @@ export const roadmapData: RoadmapItem[] = [
   {
     id: 'encounter-builder',
     title: 'Smart Encounter Builder',
-    description: 'AI-powered encounter generation and balancing for game masters.',
+    description: 'Generate fair and balanced encounters, or learn how to build them.',
     category: 'core',
     status: 'planned',
     estimatedRelease: 'Q1 2026',
@@ -115,7 +115,7 @@ export const roadmapData: RoadmapItem[] = [
     description: 'Deep integrations with popular virtual tabletop platforms.',
     category: 'integrations',
     status: 'planned',
-    estimatedRelease: 'Q2 2026',
+    estimatedRelease: 'Q1 2026',
     features: [
       'Roll20 integration',
       'Foundry VTT plugin',
@@ -131,7 +131,7 @@ export const roadmapData: RoadmapItem[] = [
     description: 'Platform for sharing and discovering community-created content.',
     category: 'community',
     status: 'planned',
-    estimatedRelease: 'Q3 2026',
+    estimatedRelease: 'Q4 2026',
     features: [
       'User-generated encounter library',
       'Community character builds',
@@ -143,16 +143,16 @@ export const roadmapData: RoadmapItem[] = [
   },
   {
     id: 'advanced-ai',
-    title: 'Advanced AI Storytelling',
-    description: 'Next-generation AI features for dynamic storytelling assistance.',
+    title: 'GM Pair Assistant',
+    description: 'If you are a new GM, you will love this feature',
     category: 'core',
     status: 'planned',
     estimatedRelease: 'Q4 2026',
     features: [
-      'Dynamic plot generation',
+      'Helps you learn to run the game',
       'Character dialogue suggestions',
       'Adaptive story branching',
-      'Voice synthesis for NPCs',
+      'NPC Management',
       'Real-time narrative analysis'
     ],
     priority: 'low'
@@ -160,11 +160,6 @@ export const roadmapData: RoadmapItem[] = [
 ];
 
 export const roadmapQuarters: RoadmapQuarter[] = [
-  {
-    quarter: 'Q4',
-    year: 2024,
-    items: roadmapData.filter(item => item.estimatedRelease === 'Q4 2024')
-  },
   {
     quarter: 'Q1',
     year: 2025,
