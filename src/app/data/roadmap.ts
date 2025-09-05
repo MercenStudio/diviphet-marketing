@@ -6,14 +6,43 @@ export const roadmapData: RoadmapItem[] = [
     title: "Alpha Testing Program",
     description: "Friends and family alpha testing to validate core concepts and gather feedback",
     category: "core",
+    status: "completed",
+    estimatedRelease: "Q3 2025",
+    features: [
+      "Invite-only alpha access",
+      "Rule lookup and game mechanics",
+      "Limited Game Master assistance",
+      "Direct feedback collection",
+      "Core feature validation"
+    ],
+    priority: "high"
+  },
+  {
+    id: "improved-interactions",
+    title: "Improved Interactions",
+    description: "Improve intent detection, narrative components, and rule retrieval.",
+    category: "core",
+    status: "in-progress",
+    estimatedRelease: "Q3 2025",
+    features: [
+      "Better intent detection on requests, e.g. 'What dice do I roll for a fireball spell?",
+      "Improved accuracy on rule lookup and citation",
+      "UI Improvements",
+      "Better confidence scores on retrieval operations"
+    ],
+    priority: "high"
+  },
+    {
+    id: "note-manager",
+    title: "Campaign Note Manager",
+    description: "Store, retrieve, and integrate your campaign notes.",
+    category: "core",
     status: "in-progress",
     estimatedRelease: "Q4 2025",
     features: [
-      "Invite-only alpha access",
-      "Basic AI Game Master conversations",
-      "Dice rolling and game mechanics",
-      "Direct feedback collection",
-      "Core feature validation"
+      "Allows you to store campaign notes and retreive them in chat sessions",
+      "Integrate notes with custom and canoncial rules",
+      "Bug fixes and UI improvements around citations and attribution",
     ],
     priority: "high"
   },
@@ -38,8 +67,8 @@ export const roadmapData: RoadmapItem[] = [
     title: "Diviphet Community Discord",
     description: "Launch community platform after alpha validation",
     category: "community",
-    status: "in-progress",
-    estimatedRelease: "Q4 2025",
+    status: "completed",
+    estimatedRelease: "Q3 2025",
     features: [
       "Discord community for collaboration",
       "Alpha tester feedback integration",
