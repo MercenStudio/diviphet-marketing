@@ -22,7 +22,7 @@ export const roadmapData: RoadmapItem[] = [
     title: "Improved Interactions",
     description: "Improve intent detection, narrative components, and rule retrieval.",
     category: "core",
-    status: "in-progress",
+    status: "completed",
     estimatedRelease: "Q3 2025",
     features: [
       "Better intent detection on requests, e.g. 'What dice do I roll for a fireball spell?",
